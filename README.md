@@ -23,9 +23,7 @@
 5. [Capturas de Pantalla](#-capturas-de-pantalla)
 6. [Instalación](#-instalación)
 7. [Configuración](#-configuración)
-8. [Uso](#-uso)
-9. [Impresión Automática](#-impresión-automática)
-10. [FAQ](#-faq)
+8. [FAQ](#-faq)
 
 ---
 
