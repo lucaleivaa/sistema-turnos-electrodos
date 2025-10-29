@@ -154,18 +154,6 @@ sistema-turnos-electrodos/
 ![Chatbot](screenshots/chatbot.jpg)
 *Chatbot con IA integrado en el panel admin para consultas automatizadas*
 
----
-
-## 🚀 Instalación
-
-### Requisitos Previos
-
-- Servidor con PHP 8.0 o superior
-- MariaDB/MySQL 10.x
-- Impresora Zebra ZD220 (para impresión automática)
-- Navegador moderno (Chrome/Edge recomendados)
-- n8n instalado (para chatbot)
-
 ## ❓ FAQ
 
 ### ¿Cómo evito turnos duplicados?
