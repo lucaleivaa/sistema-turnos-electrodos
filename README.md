@@ -21,9 +21,7 @@
 3. [Tecnologías Utilizadas](#-tecnologías-utilizadas)
 4. [Estructura del Proyecto](#-estructura-del-proyecto)
 5. [Capturas de Pantalla](#-capturas-de-pantalla)
-6. [Instalación](#-instalación)
-7. [Configuración](#-configuración)
-8. [FAQ](#-faq)
+6. [FAQ](#-faq)
 
 ---
 
