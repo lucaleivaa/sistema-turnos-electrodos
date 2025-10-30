@@ -186,5 +186,5 @@ Este proyecto es de uso interno para ElectroDosNeored
 
 ## 📧 Contacto
 
-**Electrodos S.A.**  
-Web: ElectroDosNeored
+**ElectroDosNeored**  
+Web: [ElectroDosNeored](https://www.electrodos.com.ar/electrodos/index.php)
