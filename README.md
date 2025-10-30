@@ -152,10 +152,6 @@ sistema-turnos-electrodos/
 
 ## ❓ FAQ
 
-### ¿Cómo evito turnos duplicados?
-
-El sistema usa transacciones con `GET_LOCK()` por motivo para asegurar atomicidad en la numeración, evitando colisiones cuando múltiples tablets generan turnos simultáneamente.
-
 ### ¿Puedo usar etiquetas de otro tamaño?
 
 Sí, modifica `^PW` y `^LL` en `plantilla_turno.php`. Usa la fórmula: `mm × 7.99 = puntos` (a 203 dpi).
