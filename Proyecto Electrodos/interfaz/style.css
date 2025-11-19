@@ -1,0 +1,504 @@
+/* =========================================================
+   STYLE.CSS — Rows / Electrodos
+   Ordenado por páginas/secciones de uso
+   ========================================================= */
+
+/* =========================================================
+   0) BASE / COMPARTIDO (se usa en todo el sitio)
+   ========================================================= */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Utilidades compartidas */
+.container { max-width: 600px; }
+.btn-lg { padding: 1rem 2rem; font-size: 1.5rem; border-radius: 0.75rem; }
+.ancho-fijo { width: 100%; margin: 0 auto; }
+
+/* Componentes compartidos */
+.logo {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 200px;        /* Más ancho para que se vea mejor */
+  min-width: 120px;    /* Tamaño mínimo para pantallas chicas */
+  height: auto;
+  z-index: 1000;
+}
+
+/* Botón primario grande estilo kiosco */
+.btn-turno {
+  display: block;
+  margin: 0 auto;
+  width: 480px;
+  background-color: #19a9e5;
+  color: white;
+  padding: 48px 16px;
+  font-size: 28px;
+  border: none;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.btn-turno:hover { background-color: #138bbd; }
+
+/* Botones secundarios reutilizables */
+.btn-custom {
+  display: inline-block;
+  background-color: #19a9e5;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+}
+.btn-custom:hover { background-color: #138bbd; }
+
+.btn-custom2 {
+  display: block;
+  width: 100%;
+  margin: 40px auto 0;
+  background-color: #19a9e5;
+  color: white;
+  padding: 48px 16px;
+  font-size: 28px;
+  border: none;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease-in-out;
+}
+.btn-custom2:hover { background-color: #138bbd; }
+
+.btn-volver {
+  display: block;
+  width: 75%;
+  margin: 40px auto 0;
+  background-color: #6c757d;
+  color: white;
+  padding: 48px 16px;
+  font-size: 28px;
+  border: none;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease-in-out;
+}
+.btn-volver:hover { background-color: #5a6268; }
+
+/* Botón para volver al inicio (pantalla de turno tomado) */
+
+/* Centrado vertical/horizontal para páginas simples (inicio, login) */
+.center-screen{
+  min-height: 90svh;   /* altura real del viewport en móviles modernos */
+  min-height: 90vh;    /* fallback */
+  display: grid;
+  place-items: center;  /* centra en ambas direcciones */
+  padding: 24px;
+}
+.center-container{
+  width: min(720px, 92vw);
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.btn-volver-inicio {
+  display: block;
+  margin: 0 auto;
+  width: 480px;
+  background-color: #19a9e5;
+  color: white;
+  padding: 48px 16px;
+  font-size: 28px;
+  border: none;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.btn-volver-inicio:hover { background-color: #138bbd; }
+
+/* =========================================================
+   1) TABLET — CONFIRMACIÓN DE TURNO (confirmacion.php/html)
+   ========================================================= */
+.titulo-confirmacion {
+  font-size: 3rem;
+  color: #013761;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.texto-turno { font-size: 3rem; margin-bottom: 10px; }
+.numero-turno {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #013761;
+}
+.visita { font-weight: 700; color: #013761; }
+
+/* Desplaza suavemente el contenido hacia abajo (sin centrarlo) */
+.kiosk-offset {
+  /* entre 32px y 120px según alto de pantalla */
+  padding-top: clamp(32px, 8vh, 120px);
+}
+
+
+/* =========================================================
+   2) PANEL DEL TRABAJADOR (panel_trabajador.php)
+   ========================================================= */
+
+ /* Estilos para que se vea bien */
+        #visor-turno {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 300px;
+        }
+        #numero-turno {
+            font-size: 80px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+        #ventanilla {
+            font-size: 30px;
+            color: #555;
+        }
+
+.turnos_pendientes {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #013761;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Tabla elegante de turnos */
+.tabla_turnos {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease; /* animación de entrada */
+}
+.tabla_turnos thead { background-color: #19a9e5; color: white; }
+.tabla_turnos th,
+.tabla_turnos td {
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+}
+.tabla_turnos tbody tr:hover { background-color: #f2f9fd; }
+
+/* Botón de cerrar sesión (header del panel) */
+.btn-cerrar-sesion {
+  background-color: #19a9e5;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-cerrar-sesion:hover {
+  background-color: #19a9e5;
+  text-decoration: none;
+}
+
+/* ===== Confirmación (checkbox) debajo del botón ===== */
+.confirm-check{
+  display:block;
+  font-size:.9rem;
+  color:#374151;
+  text-align:left;
+}
+.confirm-check input{
+  vertical-align:middle;
+  margin-right:6px;
+}
+
+/* Si listás ya cerrados */
+.badge-estado{
+  display:inline-block; padding:6px 10px; border-radius:9999px;
+  background:#e2f7ec; color:#1a7f55; border:1px solid #b8e6cf;
+  font-weight:700; font-size:.9rem;
+}
+
+/* Botón finalizar en verde (no pisa tus botones existentes) */
+.btn-finalizar {
+  background: #23a26d !important;
+  border-color: #23a26d !important;
+  color: #fff !important;
+}
+.btn-finalizar:hover { filter: brightness(0.95); }
+
+
+/* =========================================================
+   3) MENSAJES DE REGISTRO/LOGIN (procesar_registro.php, verificar_login.php)
+   ========================================================= */
+:root{
+  --rows-primary:#004664;
+  --rows-bg:#f1f5f9;
+  --rows-muted:#6b7280;
+}
+.rows-page{
+  min-height:100vh;
+  background:var(--rows-bg);
+}
+.rows-center{
+  min-height:calc(100vh - 100px);
+  display:grid;
+  place-items:center;
+  padding:24px;
+}
+.rows-card{
+  width:min(680px, 92vw);
+  background:#fff;
+  border:2px solid var(--rows-primary);
+  border-radius:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+.rows-body{ padding:32px 28px; text-align:center; }
+.rows-icon{
+  width:96px; height:96px; border-radius:50%;
+  display:grid; place-items:center;
+  font-size:40px; font-weight:800;
+  margin:0 auto 16px;
+}
+.rows-icon--ok{  background:rgba(0,70,100,.10); color:var(--rows-primary); }
+.rows-icon--err{ background:#fdecec;            color:#b91c1c; }
+.rows-title{
+  font-size:2rem; margin:0 0 6px; color:var(--rows-primary); font-weight:800;
+}
+.rows-title--error{ color:#b91c1c; }
+.rows-msg{ font-size:1.1rem; margin:0 0 24px; color:#111827; }
+.rows-actions{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+/* Botones dentro de la tarjeta (reutiliza .btn-turno + este secundario) */
+.rows-actions .btn-turno,
+.rows-actions .btn-outline-turno{
+  min-width:240px; padding:14px 20px; border-radius:14px; font-size:1.1rem;
+}
+.btn-outline-turno{
+  border:2px solid var(--rows-primary);
+  color:var(--rows-primary);
+  background:transparent;
+  text-decoration:none;
+  display:inline-block;
+}
+.btn-outline-turno:hover{ background:rgba(0,70,100,.06); }
+.rows-muted{ margin-top:16px; font-size:.95rem; color:var(--rows-muted); }
+.rows-link{ color:var(--rows-primary); text-decoration:none; font-weight:600; }
+.rows-link:hover{ text-decoration:underline; }
+.rows-footer{ text-align:center; margin-top:16px; color:var(--rows-muted); }
+
+/* Responsive para tarjetas de registro/login */
+@media (max-width:480px){
+  .rows-body{ padding:24px 20px; }
+  .rows-actions .btn-turno,
+  .rows-actions .btn-outline-turno{ min-width:100%; }
+}
+
+/* =========================================================
+   KEYFRAMES (compartidos)
+   ========================================================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* atender / atendido/*
+
+/* ==== Acciones del panel (sin reglas vacías) ==== */
+
+/* Finalizar/Atendido en rojo para diferenciar del botón normal */
+.btn-finalizar {
+  background: #dc0a0a !important;
+  border-color: #dc0a0a !important;
+  color: #fff !important;
+}
+.btn-finalizar:hover { filter: brightness(0.95); }
+
+/* Badge por si listás ya cerrados */
+.badge-estado{
+  display:inline-block; padding:6px 10px; border-radius:9999px;
+  background:#e2f7ec; color:#1a7f55; border:1px solid #b8e6cf;
+  font-weight:700; font-size:.9rem;
+}
+
+/* Evitar que se corte el contenido en la celda acción */
+.acciones-form { margin: 0; }
+td.acciones    { white-space: nowrap; }
+
+/* ========================================
+   RECUPERAR CONTRASEÑA - Estilos Específicos
+   ======================================== */
+
+.codigo-box {
+  background: #f8f9fa;
+  border: 2px solid #013761;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.clave-temporal {
+  font-size: 32px;
+  font-weight: bold;
+  color: #013761;
+  letter-spacing: 3px;
+  margin: 10px 0;
+  font-family: 'Courier New', monospace;
+}
+
+.link-box {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 15px 0;
+  word-break: break-all;
+  font-size: 14px;
+  color: #856404;
+  line-height: 1.6;
+}
+
+.link-box strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #664d03;
+}
+
+/* Input de recuperación */
+.recuperar-input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+.recuperar-input:focus {
+  border-color: #013761;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(1, 55, 97, 0.1);
+}
+
+/* Label para formularios */
+.form-label-custom {
+  text-align: left;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Texto alineado a la izquierda para instrucciones */
+.instruccion-texto {
+  text-align: left;
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Advertencia pequeña en codigo-box */
+.codigo-box-advertencia {
+  margin: 0;
+  color: #666;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Link dentro de muted text */
+.rows-muted a {
+  color: #19a9e5;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.rows-muted a:hover {
+  color: #0d7db8;
+  text-decoration: underline;
+}
+
+/* Espaciado superior para texto muted */
+.rows-muted-spacing {
+  margin-top: 20px;
+}
+
+/* ========================================
+   ADMIN - Panel de Chatbot
+   ======================================== */
+
+.admin-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; /* Logo izquierda, botón derecha */
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  height: 60px;
+  backdrop-filter: blur(10px);
+}
+
+.admin-header-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 0; /* No crece */
+}
+
+.admin-logo {
+  height: 40px;
+  width: auto;
+}
+
+.admin-usuario-nombre {
+  font-weight: 600;
+  color: #013761;
+  font-size: 16px;
+  white-space: nowrap; /* No rompe en varias líneas */
+}
+
+/* Botón cerrar sesión - SIEMPRE a la derecha */
+.admin-header .btn-cerrar-sesion {
+  background: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-left: auto; /* Fuerza al botón a la derecha */
+}
+
+.admin-header .btn-cerrar-sesion:hover {
+  background: #c82333;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
